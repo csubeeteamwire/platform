@@ -19,6 +19,6 @@ release:
     - ls -la
     - git remote add github https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/csubeeteamwire/platform.git
     - git push github $CI_COMMIT_TAG
-    - git push github master
+    - git push github main
   after_script:
     - rm -rf .git
