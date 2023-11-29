@@ -8,6 +8,10 @@ stages:
   - test
   - release
 
+.allow-to-fail: &allow-to-fail
+  stage: test
+  allow_failure: true
+
 default:
   tags:
     - platform
@@ -17,7 +21,6 @@ test:
   stage: test
   script:
     - pong
-  allow_failure: true
 
 release:
   stage: release
