@@ -18,10 +18,8 @@ release:
   script:
     - ls -la
     - git remote add github https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/csubeeteamwire/platform.git
-    - git status
-    - git branch
-    - git remote -v
     - git push github $CI_COMMIT_TAG
+    - git checkout master
     - git push github master
   after_script:
     - rm -rf .git
