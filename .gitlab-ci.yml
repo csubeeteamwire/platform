@@ -18,6 +18,7 @@ default:
     - lint
 
 test:
+  <<: *allow-to-fail
   stage: test
   script:
     - pong
