@@ -4,8 +4,9 @@ stages:
 
 default:
   tags:
-    - desktop
-    - linux
+    - platform
+    - lint
+
 
 release:
   stage: release
